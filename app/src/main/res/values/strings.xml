@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android Facebook Login</string>
+
+    <string name="facebook_app_id">1766583683461895</string>
+    <string name="fb_login_protocol_scheme">fb1766583683461895</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="cancel_login">Cancel!</string>
+    <string name="error_login">Error!</string>
+    <string name="logout">Log Out!</string>
+
+</resources>
