@@ -7,6 +7,6 @@
     <string name="welcome">Welcome</string>
     <string name="cancel_login">Cancel!</string>
     <string name="error_login">Error!</string>
-    <string name="logout">Log Out!</string>
+    <string name="find">Find</string>
 
 </resources>

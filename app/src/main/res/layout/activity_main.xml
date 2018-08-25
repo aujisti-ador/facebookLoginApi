@@ -7,10 +7,11 @@
 
     <ImageView
         android:id="@+id/photoImageView"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_above="@+id/nameTextView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
         android:background="@color/colorAccent" />
 
     <TextView
@@ -20,32 +21,85 @@
         android:layout_centerInParent="true"
         android:layout_margin="8dp"
         android:textSize="20sp"
+        android:layout_below="@+id/photoImageView"
         tools:text="Name" />
+
+    <TextView
+        android:id="@+id/TvFbEmaiName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textStyle="italic"
+        android:layout_below="@+id/nameTextView"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:textSize="15sp"
+        android:textColor="#892323"/>
 
     <TextView
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nameTextView"
+        android:layout_below="@+id/TvFbEmaiName"
         android:layout_centerHorizontal="true"
         android:textSize="16sp"
         tools:text="ejemplo@ejemplo.com" />
 
     <TextView
+        android:id="@+id/TvFbIdName"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook Id:"
+        android:layout_below="@+id/emailTextView"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:textColor="#892323"
+        android:textSize="15sp"/>
+    <TextView
         android:id="@+id/idTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailTextView"
+        android:layout_below="@+id/TvFbIdName"
         android:layout_centerHorizontal="true"
         tools:text="Id" />
 
     <Button
         style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btn_request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/idTextView"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Request"/>
+
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btn_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_request"
+        android:text="friends" />
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/btn_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_friends"
+        android:text="@string/find" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_find"
         android:onClick="logout"
-        android:text="@string/logout" />
+        android:text="Logout"
+        />
 
 </RelativeLayout>
