@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        photoImageView = (ImageView) findViewById(R.id.photoImageView);
-        nameTextView = (TextView) findViewById(R.id.nameTextView);
-        emailTextView = (TextView) findViewById(R.id.emailTextView);
-        idTextView = (TextView) findViewById(R.id.idTextView);
+        photoImageView = findViewById(R.id.photoImageView);
+        nameTextView = findViewById(R.id.nameTextView);
+        emailTextView = findViewById(R.id.emailTextView);
+        idTextView = findViewById(R.id.idTextView);
 
         profileTracker = new ProfileTracker() {
             @Override
@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
+        Log.d("AAAAAA", AccessToken.getCurrentAccessToken().toString());
 
         if (AccessToken.getCurrentAccessToken() == null) {
             goLoginScreen();
@@ -140,5 +142,12 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         profileTracker.stopTracking();
+    }
+
+    public void friends(View view) {
+        Intent intent = new Intent(this, Friends.class);
+
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
